@@ -9,7 +9,7 @@ exports.check = async (req,res) => {
 
      
     setTimeout(function(){
-        let url = `https://developer.goibibo.com/api/search/?app_id=2f94f330&app_key=d62c896ef968e1ebfbf3763c89080379&format=json&source=${req.body.origin}&destination=${req.body.dest}&dateofdeparture=${d}&seatingclass=E&adults=1&children=0&infants=0&counter=100`
+        let url = `https://developer.goibibo.com/api/search/?app_id=2f94f330&app_key=d62c896ef968e1ebfbf3763c89080379&format=json&source=${req.body.origin}&destination=${req.body.dest}&dateofdeparture=${d}&seatingclass=${req.body.prefer}&adults=${req.body.travellers}&children=0&infants=0&counter=100`
         request({
               method: 'GET',
               uri: url
